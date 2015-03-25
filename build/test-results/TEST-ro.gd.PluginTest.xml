@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ro.gd.PluginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-03-24T05:14:27" hostname="zhy" time="112.089">
+  <properties/>
+  <testcase name="testSourceSets" classname="ro.gd.PluginTest" time="112.089"/>
+  <system-out><![CDATA[13:14:30.199 [Test worker] DEBUG o.g.a.i.a.m.DefaultLocalMavenRepositoryLocator - No local repository in Settings file defined. Using default path: C:\Users\zenghuiying\.m2\repository
+r: []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,3 @@
+rootProject.name = 'ro-gd'
+include ":ro"
+project(":ro").projectDir = file("../ro")

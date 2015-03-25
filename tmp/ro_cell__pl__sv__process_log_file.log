@@ -1,0 +1,644 @@
+2014-11-16 22:36:58 - Error:{RoErr::Bash::ExeErr} err cmd: gradle build -s
+:ro:compileJava UP-TO-DATE
+:ro:processResources UP-TO-DATE
+:ro:classes UP-TO-DATE
+:ro:jar UP-TO-DATE
+:compileJava UP-TO-DATE
+:compileGroovy FAILED
+
+BUILD FAILED
+
+Total time: 10.155 secs
+
+startup failed:
+/home/roroco/Dropbox/jvs/ro-gd/src/main/groovy/ro/gd/Pj.groovy: 9: unexpected token: pj @ line 9, column 6.
+        pj
+        ^
+
+1 error
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileGroovy'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compileGroovy'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:42)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:305)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.executeTask(AbstractTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:63)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:51)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:23)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:88)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:68)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:55)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:149)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:106)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:80)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:36)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:51)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:237)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:210)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:206)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.Main.doAction(Main.java:33)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:54)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:35)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler error output for details.
+	at org.gradle.api.internal.tasks.compile.ApiGroovyCompiler.execute(ApiGroovyCompiler.java:125)
+	at org.gradle.api.internal.tasks.compile.ApiGroovyCompiler.execute(ApiGroovyCompiler.java:47)
+	at org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonServer.execute(CompilerDaemonServer.java:53)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:355)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+
+
+
+2014-11-16 22:36:58 - Backtrace:
+2014-11-16 22:36:58 - /home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:135:in `_bash'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:182:in `bash'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:27:in `block in g'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:26:in `g'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:18:in `block in build'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:17:in `build'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:20:in `build_ro_gd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:34:in `try'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:194:in `handle_rq'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:118:in `block (2 levels) in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:26:in `block in create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:11:in `initialize'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `new'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `ro_fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:111:in `block in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `loop'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:46:in `restart'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls/meta.rb:135:in `block (2 levels) in delegate_ins_meth'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_runner.rb:31:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_bin.rb:2:in `<top (required)>'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `load'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `<top (required)>'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `load'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `<main>'
+2014-11-16 23:00:37 - Error:{RoErr::Bash::ExeErr} err cmd: gradle build -s
+:ro:compileJava UP-TO-DATE
+:ro:processResources UP-TO-DATE
+:ro:classes UP-TO-DATE
+:ro:jar
+:compileJava
+:processResources UP-TO-DATE
+:classes
+:jar UP-TO-DATE
+:assemble UP-TO-DATE
+:compileTestJava
+:processTestResources UP-TO-DATE
+:testClasses
+:test
+
+ro.gd.PjTest > junit.framework.TestSuite$1.warning FAILED
+    junit.framework.AssertionFailedError at TestSuite.java:100
+:test FAILED
+
+BUILD FAILED
+
+Total time: 12.371 secs
+
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///home/roroco/Dropbox/jvs/ro-gd/build/reports/tests/index.html
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':test'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:42)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:305)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.executeTask(AbstractTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:63)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:51)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:23)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:88)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:68)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:55)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:149)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:106)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:80)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:36)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:51)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:237)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:210)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:206)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.Main.doAction(Main.java:33)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:54)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:35)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+Caused by: org.gradle.api.GradleException: There were failing tests. See the report at: file:///home/roroco/Dropbox/jvs/ro-gd/build/reports/tests/index.html
+	at org.gradle.api.tasks.testing.Test.handleTestFailures(Test.java:1111)
+	at org.gradle.api.tasks.testing.Test.executeTests(Test.java:542)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:63)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:218)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:211)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:200)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:579)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:562)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+	... 44 more
+
+
+
+2014-11-16 23:00:37 - Backtrace:
+2014-11-16 23:00:37 - /home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:135:in `_bash'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:182:in `bash'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:27:in `block in g'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:26:in `g'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:18:in `block in build'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:17:in `build'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:20:in `prepare'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:36:in `try'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:194:in `handle_rq'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:118:in `block (2 levels) in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:26:in `block in create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:11:in `initialize'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `new'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `ro_fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:111:in `block in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `loop'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:46:in `restart'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls/meta.rb:135:in `block (2 levels) in delegate_ins_meth'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_runner.rb:31:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_bin.rb:2:in `<top (required)>'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `load'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `<top (required)>'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `load'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `<main>'
+2014-11-16 23:08:53 - Error:{RoErr::Bash::ExeErr} err cmd: gradle build -s
+:ro:compileJava UP-TO-DATE
+:ro:processResources UP-TO-DATE
+:ro:classes UP-TO-DATE
+:ro:jar UP-TO-DATE
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar UP-TO-DATE
+:assemble UP-TO-DATE
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test
+
+ro.gd.PjTest > junit.framework.TestSuite$1.warning FAILED
+    junit.framework.AssertionFailedError at TestSuite.java:100
+:test FAILED
+
+BUILD FAILED
+
+Total time: 7.512 secs
+
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///home/roroco/Dropbox/jvs/ro-gd/build/reports/tests/index.html
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':test'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:42)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:305)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.executeTask(AbstractTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:63)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:51)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:23)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:88)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:68)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:55)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:149)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:106)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:80)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:36)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:51)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:237)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:210)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:206)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.Main.doAction(Main.java:33)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:54)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:35)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+Caused by: org.gradle.api.GradleException: There were failing tests. See the report at: file:///home/roroco/Dropbox/jvs/ro-gd/build/reports/tests/index.html
+	at org.gradle.api.tasks.testing.Test.handleTestFailures(Test.java:1111)
+	at org.gradle.api.tasks.testing.Test.executeTests(Test.java:542)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:63)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:218)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:211)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:200)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:579)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:562)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+	... 44 more
+
+
+
+2014-11-16 23:08:53 - Backtrace:
+2014-11-16 23:08:53 - /home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:135:in `_bash'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:182:in `bash'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:27:in `block in g'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:26:in `g'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:18:in `block in build'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:17:in `build'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:20:in `prepare'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:36:in `try'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:194:in `handle_rq'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:118:in `block (2 levels) in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:26:in `block in create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:11:in `initialize'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `new'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `ro_fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:111:in `block in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `loop'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:46:in `restart'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls/meta.rb:135:in `block (2 levels) in delegate_ins_meth'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_runner.rb:31:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_bin.rb:2:in `<top (required)>'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `load'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `<top (required)>'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `load'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `<main>'
+2014-11-16 23:09:15 - Error:{RoErr::Bash::ExeErr} err cmd: gradle build -s
+:ro:compileJava UP-TO-DATE
+:ro:processResources UP-TO-DATE
+:ro:classes UP-TO-DATE
+:ro:jar UP-TO-DATE
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar UP-TO-DATE
+:assemble UP-TO-DATE
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test
+
+ro.gd.PjTest > junit.framework.TestSuite$1.warning FAILED
+    junit.framework.AssertionFailedError at TestSuite.java:100
+:test FAILED
+
+BUILD FAILED
+
+Total time: 10.035 secs
+
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///home/roroco/Dropbox/jvs/ro-gd/build/reports/tests/index.html
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':test'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:42)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:305)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.executeTask(AbstractTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:63)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:51)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:23)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:88)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:68)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:55)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:149)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:106)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:80)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:36)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:51)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:237)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:210)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:206)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.Main.doAction(Main.java:33)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:54)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:35)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+Caused by: org.gradle.api.GradleException: There were failing tests. See the report at: file:///home/roroco/Dropbox/jvs/ro-gd/build/reports/tests/index.html
+	at org.gradle.api.tasks.testing.Test.handleTestFailures(Test.java:1111)
+	at org.gradle.api.tasks.testing.Test.executeTests(Test.java:542)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:63)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:218)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:211)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:200)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:579)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:562)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+	... 44 more
+
+
+
+2014-11-16 23:09:15 - Backtrace:
+2014-11-16 23:09:15 - /home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:135:in `_bash'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:182:in `bash'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:27:in `block in g'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:26:in `g'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:18:in `block in build'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:17:in `build'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:20:in `prepare'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:36:in `try'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:194:in `handle_rq'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:118:in `block (2 levels) in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:26:in `block in create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:11:in `initialize'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `new'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `ro_fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:111:in `block in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `loop'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:46:in `restart'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls/meta.rb:135:in `block (2 levels) in delegate_ins_meth'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_runner.rb:31:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_bin.rb:2:in `<top (required)>'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `load'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `<top (required)>'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `load'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `<main>'
+2014-11-17 11:53:40 - Error:{RoErr::Bash::ExeErr} err cmd: gradle build -s
+:ro:compileJava
+:ro:processResources UP-TO-DATE
+:ro:classes
+:ro:jar
+:compileJava FAILED
+
+BUILD FAILED
+
+Total time: 12.083 secs
+
+/home/roroco/Dropbox/jvs/ro/src/main/java/ro/Str.java:66: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        return new Str(ss).join("").toString();
+                       ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+/home/roroco/Dropbox/jvs/ro-gd/src/main/java/ro/gd/ex/Ex.java:5: warning: CommandLine is internal proprietary API and may be removed in a future release
+import sun.tools.jar.CommandLine;
+                    ^
+/home/roroco/Dropbox/jvs/ro-gd/src/main/java/ro/gd/Task.java:16: error: missing return statement
+    }
+    ^
+1 error
+1 warning
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compileJava'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:42)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:305)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.executeTask(AbstractTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:63)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:51)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:23)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:88)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:68)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:62)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:55)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:149)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:106)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:80)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
+	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:36)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:51)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:237)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:210)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:206)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.Main.doAction(Main.java:33)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:54)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:35)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler error output for details.
+	at org.gradle.api.internal.tasks.compile.jdk6.Jdk6JavaCompiler.execute(Jdk6JavaCompiler.java:47)
+	at org.gradle.api.internal.tasks.compile.jdk6.Jdk6JavaCompiler.execute(Jdk6JavaCompiler.java:38)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:97)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:50)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:36)
+	at org.gradle.api.internal.tasks.compile.CleaningJavaCompilerSupport.execute(CleaningJavaCompilerSupport.java:34)
+	at org.gradle.api.internal.tasks.compile.CleaningJavaCompilerSupport.execute(CleaningJavaCompilerSupport.java:25)
+	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:127)
+	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:113)
+	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:90)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:63)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$IncrementalTaskAction.doExecute(AnnotationProcessingTaskFactory.java:235)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:211)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$IncrementalTaskAction.execute(AnnotationProcessingTaskFactory.java:222)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:200)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+	... 44 more
+
+
+
+2014-11-17 11:53:40 - Backtrace:
+2014-11-17 11:53:40 - /home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:135:in `_bash'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/bash.rb:182:in `bash'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:27:in `block in g'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:26:in `g'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:18:in `block in build'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/pj/misc.rb:14:in `tmply_cd'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/gd.rb:17:in `build'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:20:in `prepare'
+/home/roroco/Dropbox/rbs/ro_r4j/lib/ro_cmds/idea.rb:14:in `all'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:194:in `handle_rq'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:118:in `block (2 levels) in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:26:in `block in create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:24:in `create_process'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/forker.rb:11:in `initialize'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `new'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_helper/process.rb:42:in `ro_fork'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:111:in `block in start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `loop'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:102:in `start'
+/home/roroco/Dropbox/rbs/ro_pl/lib/ro_cell/pl/sv.rb:46:in `restart'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls/meta.rb:135:in `block (2 levels) in delegate_ins_meth'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_helper/cmds/kls.rb:51:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_runner.rb:31:in `start'
+/home/roroco/Dropbox/rbs/ro_cmds/lib/ro_cmds_bin.rb:2:in `<top (required)>'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `load'
+/home/roroco/Dropbox/rbs/ro_cmds/bin/ro:2:in `<top (required)>'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `load'
+/home/roroco/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bin/ro:23:in `<main>'

@@ -1,0 +1,2 @@
+¹13:14:30.199 [Test worker] DEBUG o.g.a.i.a.m.DefaultLocalMavenRepositoryLocator - No local repository in Settings file defined. Using default path: C:\Users\zenghuiying\.m2\repository
+r: []
